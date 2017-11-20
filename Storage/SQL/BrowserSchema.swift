@@ -1097,8 +1097,7 @@ open class BrowserSchema: Schema {
 
         if from < 28 && to >= 28 {
             if !self.run(db, queries: [
-                self.pendingBookmarksDeletions,
-                self.bufferBookmarksWithDeletionsView
+                self.pendingBookmarksDeletions
             ]) {
                 return false
             }
